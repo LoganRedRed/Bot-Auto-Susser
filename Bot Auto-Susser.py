@@ -1,7 +1,7 @@
 import discord
 import time
 
-BotDirectory = r"D:\Special\Discord Bots\Bot Auto-Susser" # The folder the script is in.
+BotDirectory = r"this won't work until you put it in" # The folder the script is in.
 
 StaffRole = 1087098728353104062
 IdentificationRole = 1519422154855415981
@@ -124,4 +124,4 @@ client.run(f"{TheSecret}")
 
 # https://discordpy.readthedocs.io/en/stable/faq.html
 
-# file:///C:/Users/Logan/AppData/Local/Python/pythoncore-3.14-64/Doc/html/index.html https://docs.python.org/3/
+# https://docs.python.org/3/
