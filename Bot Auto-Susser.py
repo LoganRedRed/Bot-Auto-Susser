@@ -3,6 +3,10 @@ import time
 
 BotDirectory = r"this won't work until you put it in" # The folder the script is in.
 
+# Start of configuration
+
+BotDirectory = r"this won't work until you put it in" # The folder the script is in.
+
 StaffRole = 1087098728353104062
 IdentificationRole = 1519422154855415981
 LockAwayRole = 1224813669469257858
@@ -12,6 +16,8 @@ LogChannel = 1103121682698358804
 BotCloseEmoji = "<:BotClosed:1523873650477109289>"
 BotOpenEmoji = "<:BotOpen:1523873663995346944>"
 BotPrefix = "$"
+
+# End of configuration
 
 AllowedMentions = discord.AllowedMentions(users=False)
 intents = discord.Intents.default()
@@ -120,7 +126,9 @@ async def on_member_update(before, after):
 client.run(f"{TheSecret}")
 
 
-# py "{BotDirectory}\Bot Auto-Susser.py"
+# Links and commands. Top one is for running it in cmd. Do remember to put the file path there, if you use it.
+
+# py "(bot directory)\Bot Auto-Susser.py"
 
 # https://discordpy.readthedocs.io/en/stable/faq.html
 
