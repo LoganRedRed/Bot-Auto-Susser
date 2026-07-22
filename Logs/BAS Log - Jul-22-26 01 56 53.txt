@@ -1,0 +1,8 @@
+Jul-22-26 01:56:57 - We have logged in as LoganRedRed's Test Bot#2029
+
+Jul-22-26 02:01:08 - loganredred(651551210125524998): "Example message, with one attachment.
+Newlines also work fine.
+I can even add emojis. 🧨"
+Attachment list: 1784710866787826000 
+Jul-22-26 02:01:19 - loganredred(651551210125524998): "And this is what a second message looks like."
+Attachment list: 

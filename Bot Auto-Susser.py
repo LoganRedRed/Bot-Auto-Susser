@@ -1,8 +1,6 @@
 import discord
 import time
 
-BotDirectory = r"this won't work until you put it in" # The folder the script is in.
-
 # Start of configuration
 
 BotDirectory = r"this won't work until you put it in" # The folder the script is in.
@@ -13,8 +11,8 @@ LockAwayRole = 1224813669469257858
 LockAwayChannel = 1224813137660874865
 LogChannel = 1103121682698358804
 
-BotCloseEmoji = "<:BotClosed:1523873650477109289>"
-BotOpenEmoji = "<:BotOpen:1523873663995346944>"
+BotCloseEmoji = "<:BotClosed:1528530762662543431>"
+BotOpenEmoji = "<:BotOpen:1528530783940116570>"
 BotPrefix = "$"
 
 # End of configuration
@@ -42,6 +40,14 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    if(message.channel == client.get_channel(LockAwayChannel)):
+        LogEntryFile = ""
+        for attachment in message.attachments:
+            FileTime_ = time.time_ns()
+            await attachment.save(fr"{BotDirectory}\UserAttachments\{FileTime_} - {message.author.id} - {attachment.filename} _")
+            LogEntryFile = f"{LogEntryFile}{FileTime_} "
+        Logging.write(f"{time.strftime(r"%b-%d-%y %H:%M:%S")} - {message.author.name}({message.author.id}): \"{message.content}\"\nAttachment list: {LogEntryFile}\n")
+
     if message.author == client.user:
         return
     
@@ -124,7 +130,6 @@ async def on_member_update(before, after):
 
 
 client.run(f"{TheSecret}")
-
 
 # Links and commands. Top one is for running it in cmd. Do remember to put the file path there, if you use it.
 
